@@ -1,6 +1,15 @@
-import styles from "./page.module.css";
+"use client"
+
+import Form from "@/componentes/Form/Form";
+import Listado from "@/componentes/Listado/Listado";
+import {useState} from "react"
+
 
 export default function Home() {
-  return (<h1>Hola Mundo!</h1>
+  return (
+    <>
+      
+     
+    </>
   );
 }
