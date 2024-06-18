@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import './nav.css';
+import './Nav.css';
 
 const Nav = () => {
     return (
-    <nav> 
+    <nav className='navbar'> 
         <li class="nav-item"> <Link href="/reservas">Reservas</Link></li>
         <li class="nav-item"> <Link href="/quienes-somos">Quienes somos</Link></li>
         <li class="nav-item"> <Link href="/contacto">Contacto</Link></li>

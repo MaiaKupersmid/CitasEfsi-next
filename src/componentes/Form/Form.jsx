@@ -15,10 +15,7 @@ function Form({ setCitas, citas }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({...formData,[name]: value});
   };
 
   const handleSubmit = (e) => {
@@ -29,12 +26,14 @@ function Form({ setCitas, citas }) {
     } else {
       const obj = {
         id: generarIDUnico(),
-        mascota: formData.mascota.trim(),
-        propietario: formData.propietario.trim(),
-        fecha: formData.fecha.trim(),
-        hora: formData.hora.trim(),
-        sintomas: formData.sintomas.trim()
+        mascota: document.getElementById('mascota').value.trim(),
+        propietario: document.getElementById('propietario').value.trim(),
+        fecha: document.getElementById('fecha').value.trim(),
+        hora: document.getElementById('hora').value.trim(),
+        sintomas: document.getElementById('sintomas').value.trim()
       };
+
+      console.log("----------------------------------------------------------------------------------", obj.mascota);
 
       if (!obj.mascota || !obj.propietario || !obj.fecha || !obj.hora || !obj.sintomas) {
         alert("Por favor, complete todos los campos del formulario.");
