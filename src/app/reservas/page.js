@@ -2,10 +2,22 @@
 
 import Form from "@/componentes/Form/Form";
 import Listado from "@/componentes/Listado/Listado";
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 export default function Reservas () {
-  const [citas,setCitas] = useState([])
+  const [citas, setCitas] = useState([])
+
+  useEffect(() => {
+    const citasGuardadas = JSON.parse(localStorage.getItem('citas'));
+    if (citasGuardadas) {
+      setCitas(citasGuardadas);
+    }
+  }, []);
+  
+  useEffect(() => {
+    localStorage.setItem("reservas", JSON.stringify(citas))
+  }, [citas]);
+
   return (
     <>
       <h1>ADMINISTRADOR DE PACIENTES</h1>
