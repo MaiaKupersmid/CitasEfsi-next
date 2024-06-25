@@ -1,13 +1,13 @@
 "use client"
 
-import './listado.css';
-import Card from '../card/card.jsx'
+import Card from '../Card/Card';
+import './Listado.css';
 
 function Listado({setCitas,citas}) {
     return(
         <>
         {citas && citas.map(item=>(
-            <Card 
+            <Card
             citas={citas} 
             setCitas={setCitas}
             id={item.id}

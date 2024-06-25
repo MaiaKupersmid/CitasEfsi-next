@@ -1,7 +1,7 @@
 "use client"
 
-import Button from "../button/button.jsx";
-import './card.css';
+import Button from "../Button/Button.jsx";
+import './Card.css';
 
 function Card(props) {
     function handleEliminar() {

@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react";
-import Input from "../input/input.jsx";
-import Button from "../button/button.jsx";
+import Input from "../Input/Input";
+import Button from "../Button/Button";
 
 function Form({ setCitas, citas }) {
   const [formData, setFormData] = useState({
