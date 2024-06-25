@@ -4,10 +4,9 @@ import Listado from "@/componentes/Listado/Listado";
 import {useState, useEffect} from "react"
 
 export default function Reservas () {
-  const [citas, setCitas] = useState(() => {
-    const localData = localStorage.getItem("citas");
-    return localData ? JSON.parse(localData) :[];
-  });
+  const localData = localStorage.getItem("citas");
+
+  const [citas, setCitas] = useState(localData ? JSON.parse(localData) :[]);
 
   useEffect(() => {
     localStorage.setItem("citas", JSON.stringify(citas))
